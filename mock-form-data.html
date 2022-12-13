@@ -1,10 +1,189 @@
 <html>
+  <head>
+    <style>
+
+input {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  border: 0px;
+  margin: 0px;
+  appearance: none;
+  font: inherit;
+  letter-spacing: 0.5px;
+  box-shadow: none;
+  background: none;
+  outline: none;
+  color: black;
+  overflow: hidden;
+  height: 2.375rem;
+  padding: 7px 12px;
+  border: 1px solid #4040a8;
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+
+
+button {
+  display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border: 0;
+    padding: 0;
+    background: none;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: background-color 75ms;
+    transition: background-color 75ms;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #0d0d0d;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.1428571428571428;
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    height: 2.5rem;
+    padding: 0 12px;
+    line-height: calc(2.5rem - 2px);
+    color: #ffffff;
+    background-color: #4040a8;
+
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #4040a8;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4040a8;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.form-container {
+  margin: 10px; 
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+    </style>
+  </head>
   <body>
-    <div style="width:200px;">
+    <div style="width:250px;">
       <center>
         <h3>Pubby Apply Mock Data</h3>
         <img src="/images/icon-128.png" />
       </center>
+
+      <div class="form-container">
+
+      
+
+      <div class="mb10">
+        <h4>E-mail mock</h4>
+        <input type="text" id="email" />
+      </div>
+
+      <div class="mb10">
+        <div class="mb10">
+          <h4>Allow to run in prod</h4>
+        </div>
+        <div>
+          <label class="switch">
+            <input id="runInProd" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+      </div>
+      <div class="mb10">
+        <button id="set">Set</button>
+      </div>
     </div>
+    </div>
+    <script src="popup.js"></script>
   </body>
 </html>
