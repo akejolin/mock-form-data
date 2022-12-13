@@ -1,4 +1,4 @@
-# Acast Mercury - Pubby Apply Mock Data
+# Pubby Apply Mock Data
 
 ### Getting started
 1. Clone the repo anywhere on your laptop
