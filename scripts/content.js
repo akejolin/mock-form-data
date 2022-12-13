@@ -20,11 +20,8 @@
  
 
     if (isProd()) {
-      console.log('Is prod: ', isProd())
       return await readLocalStorage('runInProd');
     } else {
-      console.log('Is prod: ', isProd())
-      console.log('Allow: ', true)
       return Promise.resolve(true)
     }
   } 
@@ -154,7 +151,6 @@ const loopFocus = async () => {
 
 const run = async () => {
   const condition = await isAllowed();
-  console.log('condition: ', condition)
   if (condition === true) {
     setTimeout(init, 1500);
     setTimeout(loopFocus, 2000);
